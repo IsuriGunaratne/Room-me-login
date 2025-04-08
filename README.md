@@ -25,7 +25,7 @@ This project implements a login page for Room.me, an innovative video conference
 
     ```bash
     git clone https://github.com/IsuriGunaratne/Room-me-login.git
-    cd your-repo-name
+    cd Room-me-login
     ```
 
 2.  **Install Dependencies:**
