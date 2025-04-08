@@ -14,10 +14,11 @@ This project implements a login page for Room.me, an innovative video conference
 
 ## Technologies Used
 
-* **Next.js:** A React framework for building server-rendered and statically generated web applications.
-* **React:** A JavaScript library for building user interfaces.
-* **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
-* **`useAuthStore` (Conceptual):** This project assumes the existence of a custom React Hook or state management solution (`authStore`) for handling authentication state.
+* **Next.js** 
+* **Tailwind CSS**
+* **TypeScript** 
+* **Zustand:** for state management
+
 
 ## Getting Started
 
