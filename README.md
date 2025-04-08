@@ -72,3 +72,8 @@ For demonstration purposes, the email and password login currently uses hardcode
 
 Any other email and password combination will result in an "Invalid credentials." error. In a real application, this would be replaced with secure authentication against a database or authentication provider.
 
+![login page](https://github.com/user-attachments/assets/6261bdec-e2d9-4b4e-af95-def85525dbfd)
+![dashboard](https://github.com/user-attachments/assets/1b4f5ffb-bd14-4744-b942-182b94fc6d49)
+
+
+
