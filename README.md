@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Room.me Login Page
+
+This project implements a login page for Room.me, an innovative video conference product. It features email/password login, a Google Sign-In option (currently not linked to actual Google credentials), and a rotating image slider showcasing testimonials.
+
+## Features
+
+* **Email and Password Login:** Allows users to log in using their email address and password.
+* **Google Sign-In:** Provides a button for Google Sign-In (note: this is a UI element and is **not** currently integrated with actual Google authentication).
+* **Rotating Image Slider:** Displays testimonials and information about Room.me with an automatic and manual navigation.
+* **Basic Input Validation:** Includes client-side validation for empty fields and email format.
+* **Placeholder Authentication:** Uses hardcoded credentials (`test@visionexdigital.com.au` / `password123`) for demonstration purposes.
+* **Navigation:** Redirects to a `/dashboard` route upon successful (placeholder) login.
+* **Responsive Design:** The layout adapts to different screen sizes.
+
+## Technologies Used
+
+* **Next.js:** A React framework for building server-rendered and statically generated web applications.
+* **React:** A JavaScript library for building user interfaces.
+* **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+* **`useAuthStore` (Conceptual):** This project assumes the existence of a custom React Hook or state management solution (`authStore`) for handling authentication state.
 
 ## Getting Started
 
-First, run the development server:
+1.  **Clone the Repository:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    ```bash
+    git clone https://github.com/IsuriGunaratne/Room-me-login.git
+    cd your-repo-name
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  **Install Dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3.  **Run the Development Server:**
 
-## Learn More
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+    This will start the Next.js development server, and you can view the application in your browser at `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Important Note Regarding Google Sign-In
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The **"Sign in with Google" button** present on this login page is currently a **UI element only**. It is not configured to interact with Google's OAuth 2.0 authentication services. Clicking this button will trigger the `handleGoogleSignIn` function, which currently only sets `window.location.href` to a placeholder URL (`'YOUR_GOOGLE_SIGN_IN_URL'`).
 
-## Deploy on Vercel
+**To implement actual Google Sign-In functionality, you would need to:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Set up a Google Cloud Project and configure OAuth 2.0 client IDs.
+* Integrate a Google Sign-In library or implement the OAuth 2.0 flow manually.
+* Handle the Google Sign-In response, verify the user's ID token on your backend, and establish a session.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This implementation focuses on the visual representation of the login page.
+
+## Placeholder Authentication
+
+For demonstration purposes, the email and password login currently uses hardcoded credentials:
+
+* **Email:** `test@visionexdigital.com.au`
+* **Password:** `password123`
+
+Any other email and password combination will result in an "Invalid credentials." error. In a real application, this would be replaced with secure authentication against a database or authentication provider.
+
